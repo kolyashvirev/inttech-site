@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Хочу на Бали — Туры</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Хочу на Бали</a>
+      <nav class="main-nav">
+        <a href="/">Главная</a>
+        <a href="tours">Туры</a>
+        <a href="contacts">Контакты</a>
+        <a href="about">О нас</a>
+        <button class="btn primary" id="bookBtn">Забронировать тур</button>
+      </nav>
+      <button class="burger" id="burgerBtn" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Каталог туров</h1>
+    <div class="search-row">
+      <input id="searchInput" placeholder="Введите направление">
+      <button class="btn" id="searchBtn">Найти</button>
+    </div>
+
+    <div id="toursGrid" class="grid-3">
+      <!-- информация загрузится динамически из скрипта. -->
+    </div>
+  </main>
+
+  <footer id="contacts" class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>ООО "Хочу на Бали"</strong>
+        <p>Тел: +7 (900) 000-00-00</p>
+      </div>
+      <div class="socials">
+        <a href="https://vk.com/" target="_blank" aria-label="ВКонтакте">
+          <i class="fab fa-vk"></i>
+        </a>
+        <a href="https://t.me/" target="_blank" aria-label="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h3>Форма бронирования</h3>
+      <form id="bookingForm">
+        <label>Имя <input name="name" required></label>
+        <label>Телефон <input name="phone" required></label>
+        <label>Куда хотите отправиться?<br><textarea name="message" required></textarea></label>
+        <button class="btn primary" type="submit">Отправить</button>
+      </form>
+      <div id="formMessage" class="form-message" role="status"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

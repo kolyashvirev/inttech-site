@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Панель работника</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Панель работника</h1>
+
+  <div id="login-section">
+    <h2>Вход</h2>
+    <input id="username" placeholder="Логин">
+    <input id="password" type="password" placeholder="Пароль">
+    <button id="loginBtn">Войти</button>
+    <div id="loginMessage"></div>
+  </div>
+
+  <div id="bookings-section" style="display:none;">
+    <h2>Все заявки</h2>
+    <table border="1">
+      <thead><tr><th>ID</th><th>Имя</th><th>Телефон</th><th>Сообщение</th></tr></thead>
+      <tbody id="bookingsTable"></tbody>
+    </table>
+  </div>
+
+  <!-- 🔹 Форма создания/редактирования тура -->
+  <div id="create-tour-section" style="display:none;">
+    <h2 id="tourFormTitle">Создать тур</h2>
+    <form id="createTourForm" enctype="multipart/form-data">
+      <input name="name" placeholder="Название" required><br>
+      <input name="country" placeholder="Страна" required><br>
+      <input name="duration" placeholder="Длительность" required><br>
+      <input name="price" type="number" placeholder="Цена" required><br>
+      <input name="old_price" type="number" placeholder="Старая цена"><br>
+      <textarea name="description" placeholder="Описание" required></textarea><br>
+      <label><input type="checkbox" name="best"> Лучший тур</label><br>
+      <input type="file" name="photo"><br>
+      <button type="submit" id="tourSubmitBtn">Создать</button>
+      <button type="button" id="cancelEditBtn" style="display:none;">Отмена</button>
+    </form>
+    <div id="createTourMessage"></div>
+  </div>
+
+  <div id="tours-admin-section" style="display:none;">
+    <h2>Управление турами</h2>
+    <table border="1">
+      <thead><tr><th>ID</th><th>Название</th><th>Действия</th></tr></thead>
+      <tbody id="adminToursTable"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

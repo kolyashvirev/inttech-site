@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <name>Tom</name>
+        <age>36</age>
+        <phone>+91000000001</phone>
+    </user>
+    <user>
+        <name>Alice</name>
+        <age>32</age>
+        <phone>+91000000002</phone>
+    </user>
+    <user>
+        <name>Bob</name>
+        <age>28</age>
+        <phone>+91000000003</phone>
+    </user>
+    <user>
+        <name>David</name>
+        <age>55</age>
+    </user>
+</users>
